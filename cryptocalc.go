@@ -1,7 +1,7 @@
 package main
 
 import (
-  "crypto/md5"
+	"crypto/md5"
 	"crypto/sha1"
 	"crypto/sha256"
 	"crypto/sha512"
@@ -30,19 +30,19 @@ func main() {
 		case "md5":
 			hash := md5.New()
 			io.Copy(hash, infile)
-			fmt.Printf("%x\n", hash.Sum([]byte("")))
+			fmt.Printf("MD5: %x\n", hash.Sum([]byte("")))
 		case "sha1":
 			hash := sha1.New()
 			io.Copy(hash, infile)
-			fmt.Printf("%x\n", hash.Sum([]byte("")))
+			fmt.Printf("SHA1: %x\n", hash.Sum([]byte("")))
 		case "sha256":
 			hash := sha256.New()
 			io.Copy(hash, infile)
-			fmt.Printf("%x\n", hash.Sum([]byte("")))
+			fmt.Printf("SHA256: %x\n", hash.Sum([]byte("")))
 		case "sha512":
 			hash := sha512.New()
 			io.Copy(hash, infile)
-			fmt.Printf("%x\n", hash.Sum([]byte("")))
+			fmt.Printf("SHA512: %x\n", hash.Sum([]byte("")))
 		default:
 			Usage()
 		}
