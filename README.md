@@ -3,9 +3,11 @@ cryptocalc
 
 A program to calculate md5/sha1/sha256/sha512 based on golang
 
-First, build the source file
+Install:
 
-$ go build cryptocal.go
+$ go get -u github.com/shenyp09/cryptocalc
+$ cd $GOPATH/src/github.com/shenyp09/cryptocalc
+$ go install
 
 
 Usage: cryptocal command file
